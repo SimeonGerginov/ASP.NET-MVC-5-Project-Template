@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MVC5_Template.Core.ViewModels.Manage;
 using MVC5_Template.Models;
 
 namespace MVC5_Template.Controllers
