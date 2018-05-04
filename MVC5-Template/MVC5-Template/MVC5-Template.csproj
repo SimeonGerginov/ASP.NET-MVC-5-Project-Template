@@ -49,6 +49,18 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -101,6 +113,9 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -185,6 +200,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -280,6 +296,18 @@
     <ProjectReference Include="..\MVC5-Template.Core.ViewModels\MVC5-Template.Core.ViewModels.csproj">
       <Project>{F371AE3E-F07A-4E0D-81D9-7DDFB5A38AE3}</Project>
       <Name>MVC5-Template.Core.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC5-Template.Core\MVC5-Template.Core.csproj">
+      <Project>{D550A39C-46C8-4651-84EC-E51040C3744C}</Project>
+      <Name>MVC5-Template.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC5-Template.Infrastructure\MVC5-Template.Infrastructure.csproj">
+      <Project>{360B8215-8968-44D7-A113-F9740FBF34A3}</Project>
+      <Name>MVC5-Template.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC5-Template.Persistence.Data\MVC5-Template.Persistence.Data.csproj">
+      <Project>{BEC3AE74-D763-4565-8874-D09761F40C42}</Project>
+      <Name>MVC5-Template.Persistence.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
