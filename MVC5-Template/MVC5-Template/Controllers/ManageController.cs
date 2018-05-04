@@ -2,13 +2,15 @@
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+
 using MVC5_Template.Auth.ApplicationManagers;
 using MVC5_Template.Core.ViewModels.Manage;
 
-namespace MVC5_Template.Controllers
+namespace MVC5_Template.Web.Controllers
 {
     [Authorize]
     public class ManageController : Controller

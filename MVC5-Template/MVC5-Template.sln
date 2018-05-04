@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5-Template.Persistence.Data", "MVC5-Template.Persistence.Data\MVC5-Template.Persistence.Data.csproj", "{BEC3AE74-D763-4565-8874-D09761F40C42}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D1D27FD3-CC0C-401A-B77C-08B5A3A576F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{531BBA62-50DE-4DD7-BB54-CF9882810E7E} = {D1D27FD3-CC0C-401A-B77C-08B5A3A576F3}
 		{D550A39C-46C8-4651-84EC-E51040C3744C} = {9CF5DA3D-34CC-4406-A129-2636E02154F3}
 		{F371AE3E-F07A-4E0D-81D9-7DDFB5A38AE3} = {9CF5DA3D-34CC-4406-A129-2636E02154F3}
 		{6980B79A-D568-49F1-B7F2-C5072381EF6C} = {B2D584F1-9AE7-4C9F-A9F6-C8D6F2CC608D}

@@ -9,7 +9,7 @@ using MVC5_Template.Auth.ApplicationManagers;
 using MVC5_Template.Core.Models;
 using MVC5_Template.Core.ViewModels.Account;
 
-namespace MVC5_Template.Controllers
+namespace MVC5_Template.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller

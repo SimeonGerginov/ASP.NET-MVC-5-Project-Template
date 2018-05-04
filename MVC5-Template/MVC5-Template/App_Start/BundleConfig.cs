@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace MVC5_Template
+namespace MVC5_Template.Web
 {
     public class BundleConfig
     {
