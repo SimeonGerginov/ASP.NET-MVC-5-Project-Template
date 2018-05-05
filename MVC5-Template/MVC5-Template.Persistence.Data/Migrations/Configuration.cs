@@ -2,7 +2,7 @@ namespace MVC5_Template.Persistence.Data.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MsSqlDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<MsSqlDbContext>
     {
         public Configuration()
         {
