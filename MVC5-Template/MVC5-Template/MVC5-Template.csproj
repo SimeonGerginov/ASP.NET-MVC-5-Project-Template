@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -198,6 +201,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\DependencyInjectionConfig.cs" />
@@ -308,6 +312,10 @@
     <ProjectReference Include="..\MVC5-Template.Persistence.Data\MVC5-Template.Persistence.Data.csproj">
       <Project>{BEC3AE74-D763-4565-8874-D09761F40C42}</Project>
       <Name>MVC5-Template.Persistence.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC5-Template.Services\MVC5-Template.Services.csproj">
+      <Project>{F4B07863-B99A-4C06-88C5-A71AD4277E22}</Project>
+      <Name>MVC5-Template.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

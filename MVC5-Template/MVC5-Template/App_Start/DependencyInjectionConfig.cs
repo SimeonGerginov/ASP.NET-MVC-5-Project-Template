@@ -15,6 +15,7 @@ namespace MVC5_Template.Web.App_Start
     using MVC5_Template.Persistence.Data;
     using MVC5_Template.Persistence.Data.Repositories;
     using MVC5_Template.Persistence.Data.UnitOfWork;
+    using MVC5_Template.Services.Contracts;
 
     using Ninject;
     using Ninject.Extensions.Conventions;
@@ -74,6 +75,13 @@ namespace MVC5_Template.Web.App_Start
             kernel.Bind(x =>
             {
                 x.FromThisAssembly()
+                .SelectAllClasses()
+                .BindDefaultInterface();
+            });
+
+            kernel.Bind(x =>
+            {
+                x.FromAssemblyContaining(typeof(IDataService))
                 .SelectAllClasses()
                 .BindDefaultInterface();
             });

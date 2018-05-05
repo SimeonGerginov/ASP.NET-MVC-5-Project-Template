@@ -1,6 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Reflection;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+
+using MVC5_Template.App_Start;
 
 namespace MVC5_Template.Web
 {
@@ -12,6 +15,9 @@ namespace MVC5_Template.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var mapper = new AutoMapperConfig();
+            mapper.Execute(Assembly.GetExecutingAssembly());
         }
     }
 }
