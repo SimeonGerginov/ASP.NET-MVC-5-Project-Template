@@ -8,8 +8,9 @@ using System.Web.Routing;
 using MVC5_Template.App_Start;
 using MVC5_Template.Persistence.Data;
 using MVC5_Template.Persistence.Data.Migrations;
+using MVC5_Template.Web;
 
-namespace MVC5_Template.Web
+namespace MVC5_Template
 {
     public class MvcApplication : HttpApplication
     {

@@ -351,7 +351,7 @@ namespace MVC5_Template.Web.Controllers
         {
             foreach (var error in result.Errors)
             {
-                ModelState.AddModelError("", error);
+                ModelState.AddModelError(string.Empty, error);
             }
         }
 
@@ -362,6 +362,7 @@ namespace MVC5_Template.Web.Controllers
             {
                 return user.PasswordHash != null;
             }
+
             return false;
         }
 
