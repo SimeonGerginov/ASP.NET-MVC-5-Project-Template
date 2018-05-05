@@ -98,6 +98,10 @@
       <Project>{1F1CDC64-4B92-4652-A639-4B5FF78770A0}</Project>
       <Name>MVC5-Template.Core.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MVC5-Template.Infrastructure\MVC5-Template.Infrastructure.csproj">
+      <Project>{360B8215-8968-44D7-A113-F9740FBF34A3}</Project>
+      <Name>MVC5-Template.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVC5-Template.Persistence.Data\MVC5-Template.Persistence.Data.csproj">
       <Project>{BEC3AE74-D763-4565-8874-D09761F40C42}</Project>
       <Name>MVC5-Template.Persistence.Data</Name>

@@ -7,6 +7,7 @@ using Microsoft.Owin.Security.Cookies;
 
 using MVC5_Template.Auth.ApplicationManagers;
 using MVC5_Template.Core.Models;
+using MVC5_Template.Infrastructure.Providers;
 using MVC5_Template.Persistence.Data;
 
 using Owin;
@@ -25,7 +26,7 @@ namespace MVC5_Template.Auth
         public void ConfigureAuth(IAppBuilder app)
         {
             // Configure the db context, user manager and signin manager to use a single instance per request
-            app.CreatePerOwinContext(MsSqlDbContext.Create);
+            app.CreatePerOwinContext(ServiceLocator.InstanceProvider.ProvideInstance<MsSqlDbContext>);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
