@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 using MVC5_Template.Core.Contracts;
 using MVC5_Template.Core.Models;
+using MVC5_Template.Persistence.Data.Configurations;
 
 namespace MVC5_Template.Persistence.Data
 {
@@ -20,6 +21,14 @@ namespace MVC5_Template.Persistence.Data
         {
             this.ApplyAuditInfoRules();
             return base.SaveChanges();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new BaseEntityConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
+
+            base.OnModelCreating(modelBuilder);
         }
 
         private void ApplyAuditInfoRules()
