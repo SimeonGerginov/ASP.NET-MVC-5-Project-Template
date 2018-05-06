@@ -6,7 +6,7 @@ using System.Reflection;
 using AutoMapper;
 using MVC5_Template.Infrastructure.Contracts;
 
-namespace MVC5_Template.App_Start
+namespace MVC5_Template.Web.App_Start
 {
     public class AutoMapperConfig
     {

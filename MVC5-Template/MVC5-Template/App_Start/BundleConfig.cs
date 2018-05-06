@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace MVC5_Template.Web
+namespace MVC5_Template.Web.App_Start
 {
     public class BundleConfig
     {

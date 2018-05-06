@@ -5,12 +5,11 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-using MVC5_Template.App_Start;
 using MVC5_Template.Persistence.Data;
 using MVC5_Template.Persistence.Data.Migrations;
-using MVC5_Template.Web;
+using MVC5_Template.Web.App_Start;
 
-namespace MVC5_Template
+namespace MVC5_Template.Web
 {
     public class MvcApplication : HttpApplication
     {
