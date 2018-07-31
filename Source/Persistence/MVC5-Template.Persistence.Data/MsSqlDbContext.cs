@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using MVC5_Template.Auth.Models;
 
 namespace MVC5_Template.Persistence.Data
 {

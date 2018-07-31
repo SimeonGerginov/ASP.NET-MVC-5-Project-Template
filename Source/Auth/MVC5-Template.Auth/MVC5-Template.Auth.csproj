@@ -86,11 +86,5 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Persistence\MVC5-Template.Persistence.Data\MVC5-Template.Persistence.Data.csproj">
-      <Project>{04da47a6-dd31-4df9-861d-304d77a37612}</Project>
-      <Name>MVC5-Template.Persistence.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
