@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{11AD2908-AFDF-44D0-B5F4-145D58A1FA34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5-Template.Web", "Web\MVC5-Template.Web\MVC5-Template.Web.csproj", "{D67C72CF-5A14-48C6-91D9-7C1C018B2640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D67C72CF-5A14-48C6-91D9-7C1C018B2640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67C72CF-5A14-48C6-91D9-7C1C018B2640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67C72CF-5A14-48C6-91D9-7C1C018B2640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67C72CF-5A14-48C6-91D9-7C1C018B2640}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D67C72CF-5A14-48C6-91D9-7C1C018B2640} = {11AD2908-AFDF-44D0-B5F4-145D58A1FA34}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DC9F2E4-2B9F-498C-A8EC-838378CD3F34}
+	EndGlobalSection
+EndGlobal
