@@ -86,5 +86,11 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MVC5-Template.Core\MVC5-Template.Core.csproj">
+      <Project>{cdb647ae-b0b1-41aa-ab70-e56c0153ba09}</Project>
+      <Name>MVC5-Template.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
