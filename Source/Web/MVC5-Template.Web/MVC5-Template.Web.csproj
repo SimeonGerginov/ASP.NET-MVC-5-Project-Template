@@ -257,6 +257,10 @@
       <Project>{9c8ef088-f906-4b2d-848b-1c18fbac4c17}</Project>
       <Name>MVC5-Template.Auth</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Core\MVC5-Template.Core\MVC5-Template.Core.csproj">
+      <Project>{cdb647ae-b0b1-41aa-ab70-e56c0153ba09}</Project>
+      <Name>MVC5-Template.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Persistence\MVC5-Template.Persistence.Data\MVC5-Template.Persistence.Data.csproj">
       <Project>{04da47a6-dd31-4df9-861d-304d77a37612}</Project>
       <Name>MVC5-Template.Persistence.Data</Name>

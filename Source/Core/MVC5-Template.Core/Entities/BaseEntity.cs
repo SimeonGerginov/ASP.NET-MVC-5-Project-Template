@@ -3,9 +3,9 @@ using MVC5_Template.Core.Contracts;
 
 namespace MVC5_Template.Core.Entities
 {
-    public class BaseEntity : IBaseEntity, IAuditable, IDeletable
+    public class BaseEntity<T> : IBaseEntity<T>, IAuditable, IDeletable
     {
-        public int Id { get; set; }
+        public T Id { get; set; }
 
         public DateTime? CreatedOn { get; set; }
 

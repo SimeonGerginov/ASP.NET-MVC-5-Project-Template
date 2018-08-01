@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-using MVC5_Template.Core.Entities;
-
 namespace MVC5_Template.Core.Contracts
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface IRepository<T> where T : class, IAuditable, IDeletable
     {
         T GetById(int id);
 
