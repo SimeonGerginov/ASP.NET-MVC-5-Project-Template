@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Web.Mvc;
 
-namespace MVC5_Template.Infrastructure.Attributes
+namespace MVC5_Template.Web.Infrastructure.Attributes
 {
     public class AjaxOnlyAttribute : ActionMethodSelectorAttribute
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace MVC5_Template.Infrastructure.Contracts
+namespace MVC5_Template.Web.Infrastructure.Contracts
 {
     public interface ICustomMappings
     {

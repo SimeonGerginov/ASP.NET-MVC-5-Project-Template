@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MVC5-Template.Infrastructure")]
+[assembly: AssemblyTitle("MVC5-Template.Web.Infrastructure")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MVC5-Template.Infrastructure")]
+[assembly: AssemblyProduct("MVC5-Template.Web.Infrastructure")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("360b8215-8968-44d7-a113-f9740fbf34a3")]
+[assembly: Guid("2e569551-257b-4856-847b-8063a8016d11")]
 
 // Version information for an assembly consists of the following four values:
 //

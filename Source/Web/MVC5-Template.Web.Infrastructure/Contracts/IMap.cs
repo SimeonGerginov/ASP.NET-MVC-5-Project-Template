@@ -1,4 +1,4 @@
-﻿namespace MVC5_Template.Infrastructure.Contracts
+﻿namespace MVC5_Template.Web.Infrastructure.Contracts
 {
     /// <summary>
     /// Empty interface used for mapping objects with AutoMapper
