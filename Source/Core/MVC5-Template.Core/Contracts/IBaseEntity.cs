@@ -1,7 +1,7 @@
 ﻿namespace MVC5_Template.Core.Contracts
 {
-    public interface IBaseEntity<T>
+    public interface IBaseEntity<TKey>
     {
-        T Id { get; set; }
+        TKey Id { get; set; }
     }
 }

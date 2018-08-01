@@ -4,9 +4,9 @@ using System.Linq.Expressions;
 
 namespace MVC5_Template.Core.Contracts
 {
-    public interface IRepository<T> where T : class, IAuditable, IDeletable
+    public interface IRepository<T, TKey> where T : class, IAuditable, IDeletable
     {
-        T GetById(int id);
+        T GetById(TKey id);
 
         IEnumerable<T> GetAll();
 
