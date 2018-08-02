@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{62
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5-Template.Services.Data", "Services\MVC5-Template.Services.Data\MVC5-Template.Services.Data.csproj", "{5B3C19C4-2705-4F60-B37A-8228AB101EA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DF1EAD89-8B6E-420C-BC9F-5EAB65C288E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5-Template.Common.Coverage", "Common\MVC5-Template.Common.Coverage\MVC5-Template.Common.Coverage.csproj", "{FD799B9E-2C6E-44C8-9261-F406279BA7FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,10 @@ Global
 		{5B3C19C4-2705-4F60-B37A-8228AB101EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B3C19C4-2705-4F60-B37A-8228AB101EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B3C19C4-2705-4F60-B37A-8228AB101EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD799B9E-2C6E-44C8-9261-F406279BA7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD799B9E-2C6E-44C8-9261-F406279BA7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD799B9E-2C6E-44C8-9261-F406279BA7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD799B9E-2C6E-44C8-9261-F406279BA7FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +81,7 @@ Global
 		{CDB647AE-B0B1-41AA-AB70-E56C0153BA09} = {CB9637AF-0730-46D8-AD1D-DE399EA2D4C1}
 		{2E569551-257B-4856-847B-8063A8016D11} = {11AD2908-AFDF-44D0-B5F4-145D58A1FA34}
 		{5B3C19C4-2705-4F60-B37A-8228AB101EA6} = {627B7E6C-0C1B-4B66-99AF-99597BE24009}
+		{FD799B9E-2C6E-44C8-9261-F406279BA7FC} = {DF1EAD89-8B6E-420C-BC9F-5EAB65C288E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DC9F2E4-2B9F-498C-A8EC-838378CD3F34}
