@@ -18,11 +18,12 @@ namespace MVC5_Template.Web
     using Auth.ApplicationManagers;
     using Auth.Models;
     using Core.Contracts;
+    using Infrastructure.Filters;
+    using Infrastructure.Attributes;
     using Persistence.Data;
     using Persistence.Data.Repositories;
     using Persistence.Data.UnitOfWork;
-    using Infrastructure.Filters;
-    using Infrastructure.Attributes;
+    using Services.Data.Contracts;
 
     using Ninject;
     using Ninject.Extensions.Conventions;
@@ -82,6 +83,13 @@ namespace MVC5_Template.Web
             kernel.Bind(x =>
             {
                 x.FromThisAssembly()
+                .SelectAllClasses()
+                .BindDefaultInterface();
+            });
+
+            kernel.Bind(x =>
+            {
+                x.FromAssemblyContaining(typeof(IDataService))
                 .SelectAllClasses()
                 .BindDefaultInterface();
             });

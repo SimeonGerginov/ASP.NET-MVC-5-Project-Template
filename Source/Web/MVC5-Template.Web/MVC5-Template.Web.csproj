@@ -273,6 +273,10 @@
       <Project>{04da47a6-dd31-4df9-861d-304d77a37612}</Project>
       <Name>MVC5-Template.Persistence.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Services\MVC5-Template.Services.Data\MVC5-Template.Services.Data.csproj">
+      <Project>{5b3c19c4-2705-4f60-b37a-8228ab101ea6}</Project>
+      <Name>MVC5-Template.Services.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVC5-Template.Web.Infrastructure\MVC5-Template.Web.Infrastructure.csproj">
       <Project>{2e569551-257b-4856-847b-8063a8016d11}</Project>
       <Name>MVC5-Template.Web.Infrastructure</Name>
