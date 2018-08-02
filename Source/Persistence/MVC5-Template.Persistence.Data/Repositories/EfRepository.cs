@@ -14,20 +14,20 @@ namespace MVC5_Template.Persistence.Data.Repositories
 {
     public class EfRepository<T, TKey> : IRepository<T, TKey> where T : BaseEntity<TKey>
     {
-        private readonly IDbSet<T> _dbSet;
-        private readonly MsSqlDbContext _dbContext;
+        private readonly IDbSet<T> dbSet;
+        private readonly MsSqlDbContext dbContext;
 
         public EfRepository(MsSqlDbContext context)
         {
             Guard.WhenArgument(context, "Context").IsNull().Throw();
 
-            this._dbContext = context;
-            this._dbSet = this._dbContext.Set<T>();
+            this.dbContext = context;
+            this.dbSet = this.dbContext.Set<T>();
         }
 
         public void Add(T entity)
         {
-            this._dbSet.Add(entity);
+            this.dbSet.Add(entity);
         }
 
         public void Delete(T entity)
@@ -35,7 +35,7 @@ namespace MVC5_Template.Persistence.Data.Repositories
             entity.IsDeleted = true;
             entity.DeletedOn = DateTime.UtcNow;
 
-            var entry = this._dbContext.Entry(entity);
+            var entry = this.dbContext.Entry(entity);
             this.AttachEntity(entry, entity);
 
             entry.State = EntityState.Modified;
@@ -43,24 +43,24 @@ namespace MVC5_Template.Persistence.Data.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            return this._dbSet.AsEnumerable();
+            return this.dbSet.AsEnumerable();
         }
 
         public IEnumerable<T> GetAllFiltered(Expression<Func<T, bool>> filterExpression)
         {
-            return this._dbSet
+            return this.dbSet
                 .Where(filterExpression)
                 .AsEnumerable();
         }
 
         public T GetById(TKey id)
         {
-            return this._dbSet.Find(id);
+            return this.dbSet.Find(id);
         }
 
         public void Update(T entity)
         {
-            var entry = this._dbContext.Entry(entity);
+            var entry = this.dbContext.Entry(entity);
             this.AttachEntity(entry, entity);
 
             entry.State = EntityState.Modified;
@@ -70,7 +70,7 @@ namespace MVC5_Template.Persistence.Data.Repositories
         {
             if (entry.State == EntityState.Detached)
             {
-                this._dbSet.Attach(entity);
+                this.dbSet.Attach(entity);
             }
         }
     }

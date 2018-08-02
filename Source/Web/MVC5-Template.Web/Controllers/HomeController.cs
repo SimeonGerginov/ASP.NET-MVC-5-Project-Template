@@ -6,7 +6,7 @@ namespace MVC5_Template.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return this.View();
         }
     }
 }

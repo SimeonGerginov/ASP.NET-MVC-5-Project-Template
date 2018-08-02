@@ -6,18 +6,18 @@ namespace MVC5_Template.Web.Infrastructure.Filters
 {
     public class SaveChangesFilter : IActionFilter
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
         public SaveChangesFilter(IUnitOfWork unitOfWork)
         {
             Guard.WhenArgument(unitOfWork, "Unit of work").IsNull().Throw();
 
-            this._unitOfWork = unitOfWork;
+            this.unitOfWork = unitOfWork;
         }
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            this._unitOfWork.Complete();
+            this.unitOfWork.Complete();
         }
 
         public void OnActionExecuting(ActionExecutingContext filterContext)

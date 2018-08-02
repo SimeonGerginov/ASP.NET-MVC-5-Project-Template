@@ -11,13 +11,13 @@ namespace MVC5_Template.Web
 {
     public class AutoMapperConfig
     {
-        private readonly Assembly _assembly;
+        private readonly Assembly assembly;
 
         public AutoMapperConfig(Assembly assembly)
         {
             Guard.WhenArgument(assembly, "Assembly").IsNull().Throw();
 
-            this._assembly = assembly;
+            this.assembly = assembly;
         }
 
         public static IMapperConfigurationExpression Configuration { get; private set; }
@@ -26,7 +26,7 @@ namespace MVC5_Template.Web
         {
             Mapper.Initialize(cfg =>
             {
-                var types = this._assembly.GetExportedTypes();
+                var types = this.assembly.GetExportedTypes();
                 LoadStandardMappings(types, cfg);
                 LoadCustomMappings(types, cfg);
                 Configuration = cfg;

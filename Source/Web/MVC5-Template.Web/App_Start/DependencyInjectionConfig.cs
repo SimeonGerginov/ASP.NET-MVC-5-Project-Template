@@ -7,7 +7,14 @@ namespace MVC5_Template.Web
     using System.Data.Entity;
     using System.Web;
 
+    using Auth.ApplicationManagers;
+    using Auth.Models;
+
     using AutoMapper;
+    using Core.Contracts;
+
+    using Infrastructure.Attributes;
+    using Infrastructure.Filters;   
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
@@ -15,24 +22,20 @@ namespace MVC5_Template.Web
     using Microsoft.Owin.Security;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
-    using Auth.ApplicationManagers;
-    using Auth.Models;
-    using Core.Contracts;
-    using Infrastructure.Filters;
-    using Infrastructure.Attributes;
-    using Persistence.Data;
-    using Persistence.Data.Repositories;
-    using Persistence.Data.UnitOfWork;
-    using Services.Data.Contracts;
-
     using Ninject;
     using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
     using Ninject.Web.Mvc.FilterBindingSyntax;
 
+    using Persistence.Data;
+    using Persistence.Data.Repositories;
+    using Persistence.Data.UnitOfWork;
+
+    using Services.Data.Contracts;
+
     public static class DependencyInjectionConfig 
     {
-        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper Bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -41,7 +44,7 @@ namespace MVC5_Template.Web
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);
+            Bootstrapper.Initialize(CreateKernel);
         }
         
         /// <summary>
@@ -49,7 +52,7 @@ namespace MVC5_Template.Web
         /// </summary>
         public static void Stop()
         {
-            bootstrapper.ShutDown();
+            Bootstrapper.ShutDown();
         }
         
         /// <summary>
