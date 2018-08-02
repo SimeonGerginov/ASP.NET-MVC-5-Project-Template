@@ -3,7 +3,7 @@
 using MVC5_Template.Persistence.Data;
 using MVC5_Template.Persistence.Data.Migrations;
 
-namespace MVC5_Template.Web.Infrastructure.Configs
+namespace MVC5_Template.Web
 {
     public static class DatabaseConfig
     {

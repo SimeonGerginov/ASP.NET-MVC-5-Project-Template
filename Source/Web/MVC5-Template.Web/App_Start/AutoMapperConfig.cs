@@ -7,7 +7,7 @@ using AutoMapper;
 using Bytes2you.Validation;
 using MVC5_Template.Web.Infrastructure.Contracts;
 
-namespace MVC5_Template.Web.Infrastructure.Configs
+namespace MVC5_Template.Web
 {
     public class AutoMapperConfig
     {
