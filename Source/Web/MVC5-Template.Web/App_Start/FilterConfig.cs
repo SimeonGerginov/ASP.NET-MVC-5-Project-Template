@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using MVC5_Template.Infrastructure.Attributes;
+using MVC5_Template.Web.Infrastructure.Attributes;
 
 namespace MVC5_Template.Web
 {

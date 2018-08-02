@@ -7,6 +7,8 @@ namespace MVC5_Template.Web
     using System.Data.Entity;
     using System.Web;
 
+    using AutoMapper;
+
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
@@ -15,11 +17,17 @@ namespace MVC5_Template.Web
 
     using Auth.ApplicationManagers;
     using Auth.Models;
+    using Core.Contracts;
     using Persistence.Data;
+    using Persistence.Data.Repositories;
+    using Persistence.Data.UnitOfWork;
+    using Infrastructure.Filters;
+    using Infrastructure.Attributes;
 
     using Ninject;
     using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
+    using Ninject.Web.Mvc.FilterBindingSyntax;
 
     public static class DependencyInjectionConfig 
     {
@@ -90,6 +98,13 @@ namespace MVC5_Template.Web
             kernel.Bind<IAuthenticationManager>()
                 .ToMethod(c => HttpContext.Current.GetOwinContext().Authentication).InRequestScope();
             kernel.Bind<IdentityFactoryOptions<ApplicationUserManager>>().ToSelf().InRequestScope();
+
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
+            kernel.Bind(typeof(IRepository<,>)).To(typeof(EfRepository<,>)).InRequestScope();
+            kernel.Bind<IMapper>().ToMethod(ctx => Mapper.Instance).InSingletonScope();
+
+            kernel.BindFilter<SaveChangesFilter>(System.Web.Mvc.FilterScope.Controller, 0)
+                .WhenActionMethodHas<SaveChangesAttribute>();
         }
     }
 }
