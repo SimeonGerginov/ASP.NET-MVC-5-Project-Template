@@ -12,7 +12,12 @@ namespace MVC5_Template.Auth.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class User : IdentityUser, IAuditable, IDeletable
     {
-        public DateTime? CreatedOn { get; set; }
+        public User()
+        {
+            this.CreatedOn = DateTime.UtcNow;
+        }
+
+        public DateTime CreatedOn { get; set; }
 
         public DateTime? ModifiedOn { get; set; }
 

@@ -34,7 +34,7 @@ namespace MVC5_Template.Persistence.Data.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
-                        CreatedOn = c.DateTime(precision: 7, storeType: "datetime2"),
+                        CreatedOn = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         ModifiedOn = c.DateTime(precision: 7, storeType: "datetime2"),
                         IsDeleted = c.Boolean(nullable: false),
                         DeletedOn = c.DateTime(precision: 7, storeType: "datetime2"),

@@ -7,7 +7,7 @@ namespace MVC5_Template.Core.Entities
     {
         public TKey Id { get; set; }
 
-        public DateTime? CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; }
 
         public DateTime? ModifiedOn { get; set; }
 

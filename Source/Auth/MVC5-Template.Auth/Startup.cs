@@ -10,10 +10,17 @@ using MVC5_Template.Auth.Models;
 
 using Owin;
 
+[assembly: OwinStartupAttribute(typeof(MVC5_Template.Auth.Startup))]
+
 namespace MVC5_Template.Auth
 {
     public partial class Startup
     {
+        public void Configuration(IAppBuilder app)
+        {
+            this.ConfigureAuth(app);
+        }
+
         // For more information on configuring authentication, please visit https://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {

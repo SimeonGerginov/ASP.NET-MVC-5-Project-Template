@@ -2,10 +2,9 @@
 namespace MVC5_Template.Persistence.Data.Migrations
 {
     using System.CodeDom.Compiler;
-    using System.Data.Entity.Migrations;
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
-    
+
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
     public sealed partial class Initial : IMigrationMetadata
     {
@@ -13,7 +12,7 @@ namespace MVC5_Template.Persistence.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201808011831348_Initial"; }
+            get { return "201808021215304_Initial"; }
         }
         
         string IMigrationMetadata.Source
